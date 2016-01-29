@@ -3,7 +3,7 @@ package fizzbuzz
 
 object Main {
     @JvmStatic
-    fun main(vararg args:String) {
+    fun main(vararg args: String) {
         val fizzBuzz = FizzBuzz()
 
         val integers = (1..20).toArrayList()
@@ -11,6 +11,7 @@ object Main {
         println(fizzBuzzed)
     }
 }
+
 class FizzBuzz {
     fun of(integers: List<Int>): List<String> {
         return integers.map({ x -> transform(x) })
@@ -21,8 +22,7 @@ class FizzBuzz {
         if ( x % 3 == 0) sb.append("fizz")
         if ( x % 5 == 0) sb.append("buzz")
         if ( x.toString().contains("3")) {
-            sb.reset()
-            sb.append("lucky")
+            sb.reset().append("lucky")
         }
         if ( sb.isEmpty()) sb.append(x)
 
@@ -30,6 +30,7 @@ class FizzBuzz {
     }
 }
 
-fun StringBuilder.reset() {
+fun StringBuilder.reset(): StringBuilder {
     this.setLength(0)
+    return this;
 }

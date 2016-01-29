@@ -25,11 +25,11 @@ e.g. if I run the program over a range from 1-20 I should get the following outp
 Enhance your existing solution to perform the following:
 
 * Produce a report at the end of the program showing how many times the following were output
-** fizz
-** buzz
-** fizzbuzz
-** lucky
-** an integer
+  * fizz
+  * buzz
+  * fizzbuzz
+  * lucky
+  * an integer
 
 e.g. if I run the program over a range from 1-20 I should get the following output
 
