@@ -8,7 +8,7 @@ object EagerMain {
 
         val integers = (1..20).toArrayList()
         val fizzBuzzed = fizzBuzz.eager(integers)
-        println(fizzBuzzed)
+        println(FizzBuzzReport(fizzBuzzed.asSequence()))
     }
 }
 
@@ -21,7 +21,7 @@ object LazyMain {
         val integers = (1..20).asSequence()
         val fizzBuzzed = fizzBuzz.lazy(integers)
         println("Printing fizzbuzzed sequence")
-        println(fizzBuzzed.joinToString(" "));
+        println(FizzBuzzReport(fizzBuzzed))
     }
 }
 
