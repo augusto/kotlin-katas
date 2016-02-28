@@ -4,7 +4,11 @@ import util.*
 
 class PropertyExample() {
     var counter = 0
-    var propertyWithCounter: Int? = todoTask32()
+    var propertyWithCounter: Int? = 0
+        set(value) {
+            counter++
+            field = value
+        }
 }
 
 fun todoTask32(): Nothing = TODO(
@@ -15,4 +19,7 @@ fun todoTask32(): Nothing = TODO(
     """,
     documentation = doc32(),
     references = { PropertyExample() }
+
 )
+
+
