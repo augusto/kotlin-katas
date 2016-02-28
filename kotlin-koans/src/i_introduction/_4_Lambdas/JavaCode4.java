@@ -9,11 +9,6 @@ import util.JavaCode;
 
 public class JavaCode4 extends JavaCode {
     public boolean task4(Collection<Integer> collection) {
-        return Iterables.any(collection, new Predicate<Integer>() {
-            @Override
-            public boolean apply(Integer element) {
-                return element % 42 == 0;
-            }
-        });
+        return Iterables.any(collection, element -> element % 42 == 0);
     }
 }
