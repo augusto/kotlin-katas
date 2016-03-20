@@ -20,7 +20,7 @@ fun buildStringExample(): String {
 }
 
 fun todoTask37(): Nothing = TODO(
-    """
+        """
         Task 37.
         Uncomment the commented code and make it compile.
         Add and implement function 'buildMap' with one parameter (of type extension function) creating a new HashMap,
@@ -29,11 +29,19 @@ fun todoTask37(): Nothing = TODO(
 )
 
 fun task37(): Map<Int, String> {
-    todoTask37()
-//    return buildMap {
-//        put(0, "0")
-//        for (i in 1..10) {
-//            put(i, "$i")
-//        }
-//    }
+//    todoTask37()
+    return buildMap {
+        put(0, "0")
+        for (i in 1..10) {
+            put(i, "$i")
+        }
+    }
+}
+
+fun buildMap(init: MutableMap<Int, String>.() -> Unit): MutableMap<Int, String> {
+    val map = HashMap<Int, String>()
+
+    map.init()
+
+    return map
 }
